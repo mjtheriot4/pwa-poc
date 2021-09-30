@@ -1,6 +1,6 @@
 const cacheName = 'c1';
 const resourcesToPrecache = [
-    '/',
+    './',
     'index.html',
     'style.css',
     'js/script.js',
@@ -20,6 +20,7 @@ self.addEventListener('activate', event => {
     console.log('Activate Event');
 })
 self.addEventListener('fetch', event => {
+    console.log(event.request.url);
     event.respondWith(
         caches.match(event.request).then(res =>{
             return res || fetch(event.request);
