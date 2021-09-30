@@ -46,6 +46,7 @@ main{
     text-align: center;
 }
 button{
+    -webkit-appearance: none;
     padding: 10px 20px;
     text-transform: uppercase;
 }
