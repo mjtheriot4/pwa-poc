@@ -11,6 +11,7 @@ function addAllPrecache(event){
     event.waitUntil(
         caches.open(cacheName)
         .then(cache => cache.addAll(resourcesToPrecache))
+        .catch(err => {console.log('no network');})
     )
 }
 
@@ -21,6 +22,7 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request).then(res =>{
+            console.log(res.url);
             return res || fetch(event.request);
         })
         
