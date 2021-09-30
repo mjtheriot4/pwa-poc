@@ -44,7 +44,7 @@ function printStack(list){
 function getReady() {
 	Html5Qrcode.getCameras().then(devices => {
 		if (!devices || devices.length == 0) {return;}
-		cameraId = devices[0].id;
+		cameraId = devices.length == 1 ? devices[0].id : { facingMode: "environment" };
 		startScanner()
 		this.isReady = true;
 	});
