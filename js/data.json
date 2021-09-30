@@ -1,0 +1,53 @@
+[
+    {
+        "name":  "Sample Item 01",
+        "isScanned": false,
+        "isValid": true
+    },
+    {
+        "name":  "Sample Item 02",
+        "isScanned": false,
+        "isValid": true
+    },
+    {
+        "name":  "Sample Item 03",
+        "isScanned": false,
+        "isValid": true
+    },
+    {
+        "name":  "Sample Item 04",
+        "isScanned": false,
+        "isValid": true
+    },
+    {
+        "name":  "Sample Item 05",
+        "isScanned": false,
+        "isValid": true
+    },
+    {
+        "name":  "Sample Item 06",
+        "isScanned": false,
+        "isValid": true
+    },
+    {
+        "name":  "Sample Item 07",
+        "isScanned": false,
+        "isValid": true
+    },
+    {
+        "name":  "Sample Item 09",
+        "isScanned": false,
+        "isValid": true
+    },
+    {
+        "name":  "Sample Item 09",
+        "isScanned": false,
+        "isValid": true
+    },
+    {
+        "name":  "Sample Item 10",
+        "isScanned": false,
+        "isValid": true
+    }
+
+]

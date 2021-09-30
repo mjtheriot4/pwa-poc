@@ -1,0 +1,64 @@
+/* Basic Reset */
+pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; overflow: auto; }
+.string { color: green; }
+.number { color: darkorange; }
+.boolean { color: blue; }
+.null { color: magenta; }
+.key { color: red; }
+*{
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6, p, a, strong, em, i, q, cite, figcaption{
+    font-family: 'Raleway', 'Roboto', Arial, Helvetica, sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+    color: grey;
+}
+p, strong, em, i, q, cite, figcaption{
+    color: rgb(54, 54, 54);
+}
+a{
+    color: rgb(97, 97, 97);
+}
+html, body{
+    height: 100%;
+    margin: 0;
+}
+main{
+    height: 100%;
+    padding: 30px;
+    max-width: 1060px;
+    margin: auto;
+}
+
+/* interface */
+#result{
+    display: flex;
+    align-items: center;
+}
+#result h2{
+    padding-right: 10px;
+}
+#result span{
+    color: darkolivegreen;
+}
+#actions{
+    text-align: center;
+}
+button{
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+.message{
+    background-color: deeppink;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-style: italic;
+    line-height: 1.2;
+    display: none;
+    margin-top: 15px;
+}
+.open{
+    display: block;
+}
