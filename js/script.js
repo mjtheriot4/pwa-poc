@@ -8,7 +8,7 @@ const markScanned = document.querySelector('.markScanned');
 const markUnscanned = document.querySelector('.markUnscanned');
 const message = document.querySelector('.message');
 function fetchStack(){
-	fetch('/data.json').then(res=>{
+	fetch('js/data.json').then(res=>{
 		if (!res.ok) {
 			const message = `An error has occured: ${res.status}`;
 			throw new Error(message);
