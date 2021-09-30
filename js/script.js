@@ -110,13 +110,13 @@ markUnscanned.addEventListener('click', (e)=>{
 });
 
 //********** */ offline stuff */ ***********
-// if ('serviceWorker' in navigator) {
-//     window.addEventListener('load', ()=>{
-//         navigator.serviceWorker.register('/sw.js')
-//             .then(reg => {
-//                 console.log('sw registered')
-//             }).catch(err =>{
-//                 console.log('registration failed', err);
-//             })
-//     });
-// }
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', ()=>{
+        navigator.serviceWorker.register('/sw.js')
+            .then(reg => {
+                console.log('sw registered')
+            }).catch(err =>{
+                console.log('registration failed', err);
+            })
+    });
+}
