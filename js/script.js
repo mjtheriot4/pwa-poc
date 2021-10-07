@@ -124,7 +124,7 @@ if ('serviceWorker' in navigator) {
 }
 // IDB Stuff: idb.open(name, version, callback);
 var IndexedDB = idb.open('scans-db', 1, upgradeCallback);
-function ubgradeCallback(upgradeDB){
+function upgradeCallback(upgradeDB){
 	if(!upgradeDB.objectStoreNames.contains('scans')){
 		var options = {keypath : 'name'}
 		upgradeDB.createObjectStore('scans', options);
