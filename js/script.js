@@ -7,6 +7,7 @@ const button = document.querySelector('#actions .startStop');
 const markScanned = document.querySelector('.markScanned');
 const markUnscanned = document.querySelector('.markUnscanned');
 const message = document.querySelector('.message');
+
 function fetchStack(){
 	fetch('js/data.json').then(res=>{
 		if (!res.ok) {
@@ -16,6 +17,7 @@ function fetchStack(){
 		return res.json();
 	}).then(res=>{
 		stack = res
+		loadScansFomJson(stack);
 		printStack(stack);
 	})
 }
@@ -120,3 +122,19 @@ if ('serviceWorker' in navigator) {
             })
     });
 }
+// IDB Stuff: idb.open(name, version, callback);
+var IndexedDB = idb.open('scans-db', 1, upgradeCallback);
+function ubgradeCallback(upgradeDB){
+	if(!upgradeDB.objectStoreNames.contains('scans')){
+		var options = {keypath : 'name'}
+		upgradeDB.createObjectStore('scans', options);
+	}
+}
+
+function loadScansFomJson(stack) { 
+	IndexedDB.then(db =>{
+		var transaction = db.transaction(['scans'], 'readwrite');
+		var store = transaction.objectStore('scans')
+		stack.forEach(code => {store.put(code);});
+	})
+} 

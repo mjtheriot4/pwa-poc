@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "html5-qrcode": "^2.0.12"
+    "html5-qrcode": "^2.0.12",
+    "idb": "^6.1.4"
   }
 }
